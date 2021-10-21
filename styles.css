@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+   
+    scrollbar-width: none;/*hide scrollbar for firefox*/
+    -ms-overflow-style: none;/*hide scrollbar for IE and edge*/
+}
+a{
+    text-decoration: none;
+}
+
+
+
+.container{
+    background: linear-gradient(30deg, rgba(211, 77, 128, 0.699),rgba(39, 223, 168, 0.616));
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0px 0px 10px 15px rgba(36, 121, 116, 0.514);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+    
+    overflow: hidden;
+    
+}
+ .content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    border-radius: 15px;
+    max-width: 500px;    
+    
+    width: 100%;
+    
+    
+}
+
+
+
+.myForm input[type=submit]{
+    font-size: 2.36rem;
+    font-weight: 600;
+    margin-bottom: 35px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background: linear-gradient(-90deg,#b4827c79, rgba(0, 128, 128, 0.423));
+    box-shadow:  0px 10px 15px rgba(26, 248, 237, 0.514);
+    transition: all .3s ease-in;
+    width: 500px;
+    color: lightgrey;
+}
+
+
+
+
+
+.content input[type=submit]:hover{
+    cursor: pointer;
+    border: 3px solid rgba(26, 248, 237, 0.514);
+    background: rgba(26, 190, 185, 0.514);
+    transition: all 0.3s ease-out;
+}
+
+
+body::-webkit-scrollbar{
+    display: none;
+}/* hide scrollbar for chrome, safari and opera */
+
+.cover{
+    box-shadow: 0px 0px 10px 15px rgba(26, 248, 237, 0.514);
+    border-radius: 15px;
+    color: #fff;
+    background:  linear-gradient(75deg, rgba(0,128,128,0.46),rgba(29, 240, 212, 0.527));
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wrapper{
+    box-shadow: 0px 0px 10px 15px rgba(26, 248, 237, 0.514);
+    border-radius: 15px;
+    color: #fff;
+    background:  linear-gradient(30deg, rgba(178, 26, 248, 0.514),rgba(0, 255, 242, 0.658));
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-size: cover;
+}
+.cover h1,
+.container h1,
+.wrapper h1{
+   margin-left: auto;
+   margin-right: auto;
+   background:  linear-gradient(-90deg,#b4827c79, rgba(0, 128, 128, 0.423));
+   
+   padding: 10px;
+   border-radius: 15px;
+   box-shadow: 2px 15px 10px rgba(0,128,128,0.46);
+   color: #fff;
+}
+.survey{
+    padding: 20px;
+    background:rgba(0,128,128,0.46);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 8px rgba(26, 248, 237, 0.514);
+    
+}
+.survey form{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.36rem;
+    justify-content: center;
+    margin-left: 18px;
+   
+}
+.survey form label{
+    margin-top: 15px;
+}
+
+.survey form input[type=text],
+.survey form input[type=number],
+.survey form input[type=date]{
+    width: 500px;
+    background-color: rgba(133, 228, 228, 0.423);
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-weight: 600;
+    color: bisque;
+}
+
+.survey form input::placeholder,
+.survey form input[type=date]{
+    color: beige;
+}
+
+.survey form input{
+    font-size: 1.36rem;
+}
+
+
+table{
+    width: fit-content;
+    border: 1px solid rgba(0, 128, 128, 0.923);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    justify-content: center;
+}
+td, th{
+    border: 1px solid rgba(0, 128, 128, 0.923);
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+.results button,
+.survey input[type=submit]{
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(-90deg,#b4827c79, rgba(0, 128, 128, 0.423));;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.results button:hover,
+.survey input[type=submit]:hover{
+    cursor: pointer;
+    border: 3px solid rgba(26, 248, 237, 0.514);
+    background: rgba(26, 190, 185, 0.514);
+    transition: all 0.3s ease-out;
+}
+
+.results button a,
+.survey input[type=submit]{
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.cover .results{
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 20px;
+    background:rgba(0,128,128,0.46);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 8px rgba(26, 248, 237, 0.514);
+    max-width: 800px;
+    width: 100%;
+    
+
+}
