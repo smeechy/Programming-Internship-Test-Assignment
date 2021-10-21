@@ -65,10 +65,10 @@
     $favourites = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     //initialize percentage variables and set to 0
-    $pizza_percentage = $pasta_percentage = $papAndWors_percentage = 0;
+    $pizza_percentage = $pasta_percentage = $papAndWors_percentage = $chicken_percentage = $beef_percentage= $other_percentage = 0;
 
     //set favourites counters to 0
-    $count_pizza = $count_pasta = $count_papAndWors = 0;
+    $count_pizza = $count_pasta = $count_papAndWors = $count_chicken = $count_beef = $count_other= 0;
 
     if($favourites){
         foreach($favourites as $favourite){
@@ -91,6 +91,23 @@
                 $papAndWors_percentage = ($count_papAndWors/$num_surveys['num_surveys'])*100;
             }
 
+            $chicken = "chcknStirFry";
+            if(strpos($favourite['fav'],$chicken) !== false){
+                $count_chicken += 1;
+                $chicken_percentage = ($count_chicken/$num_surveys['num_surveys'])*100;
+            }
+
+            $beef = "beefStirFry";
+            if(strpos($favourite['fav'],$beef) !== false){
+                $count_beef += 1;
+                $beef_percentage = ($count_beef/$num_surveys['num_surveys'])*100;
+            }
+
+            $other = "other";
+            if(strpos($favourite['fav'],$other) !== false){
+                $count_other += 1;
+                $other_percentage = ($count_beef/$num_surveys['num_surveys'])*100;
+            }
         }
     }
 
@@ -157,6 +174,9 @@
                 <span>Percentage of people who like Pizza:  <?=round($pizza_percentage,1)?>%</span>
                 <span>Percentage of people who like Pasta:  <?=round($pasta_percentage,1)?>%</span>
                 <span>Percentage of people who like Pap and Wors:  <?=round($papAndWors_percentage,1)?>%</span>
+                <span>Percentage of people who like Chicken stir fry:  <?=round($chicken_percentage,1)?>%</span>
+                <span>Percentage of people who like Beef stir fry:  <?=round($beef_percentage,1)?>%</span>
+                <span>Percentage of people who like other food:  <?=round($other_percentage,1)?>%</span>
                 <br>
                 <br>
                 <br>
