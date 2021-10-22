@@ -95,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <br><br><br>
             <div class="survey">
                 <h2>Personal Details:</h2>
-                <p><span class="error">* Required field</span></p>
+                <p><span class="error">* Required fields</span></p>
                 <p><span class="error"><?php echo $errMSg;?> </span></p>
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 

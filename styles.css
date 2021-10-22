@@ -145,7 +145,8 @@ body::-webkit-scrollbar{
 .survey form input[type=text],
 .survey form input[type=number],
 .survey form input[type=date]{
-    width: 500px;
+    max-width: 300px;
+    width: 100%;
     background-color: rgba(133, 228, 228, 0.423);
     height: 40px;
     border: none;
@@ -166,17 +167,21 @@ body::-webkit-scrollbar{
 
 
 table{
-    width: fit-content;
-    border: 1px solid rgba(0, 128, 128, 0.923);
-    display: flex;
+    table-layout: fixed;
+    display: block;
     align-items: center;
     border-radius: 12px;
     justify-content: center;
+    overflow-x: auto;
 }
 td, th{
     border: 1px solid rgba(0, 128, 128, 0.923);
     border-radius: 5px;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    
     
 }
 

@@ -106,7 +106,7 @@
             $other = "other";
             if(strpos($favourite['fav'],$other) !== false){
                 $count_other += 1;
-                $other_percentage = ($count_beef/$num_surveys['num_surveys'])*100;
+                $other_percentage = ($count_other/$num_surveys['num_surveys'])*100;
             }
         }
     }
