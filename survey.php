@@ -121,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <br><br>
 
                     <fieldset style="border: none;">
-                        <legend>What is your favourite food? (You can choose more than 1 answer) <span class="error">*</span></legend>
+                        <legend>What is your favourite food? (You can choose more than 1 answer)<span class="error">*</span></legend>
                         <input type="checkbox" name="favourite_food[]" value="pizza" id="pizza"> <label for="pizza">Pizza</label><br>
                         <input type="checkbox" name="favourite_food[]" value="pasta" id="pasta"> <label for="pasta">Pasta</label><br>
                         <input type="checkbox" name="favourite_food[]" value="pap&wors" id="p&w"> <label for="p&w">Pap and Wors</label><br>
@@ -132,7 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                    <br>
                    <br>
                    <table>
-                    <label>On a scale of 1 to 5 indicate whether you strongly agree to strongly disagree <span class="error">*</span></label>
+                    <label>On a scale of 1 to 5 indicate whether you strongly agree to strongly disagree<span class="error">*</span></label>
                         <tr>
                             <th></th>
                             <th>Strongly Agree (1)</th>
